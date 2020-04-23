@@ -1,5 +1,7 @@
 FROM rocker/tidyverse:3.6.3
 
+RUN apt-get update -qq && apt-get -y --no-install-recommends install libhdf5-dev
+
 RUN R -e "install.packages('ids')"
 RUN R -e "devtools::install_github('NathanSkene/One2One')"
 RUN R -e "devtools::install_github('hhoeflin/hdf5r')"
