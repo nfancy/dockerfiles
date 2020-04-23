@@ -6,10 +6,10 @@ RUN R -e "install.packages('ids')"
 RUN R -e "install.packages('askpass')"
 RUN R -e "BiocManager::install('DropletUtils')"
 RUN R -e "BiocManager::install('biomaRt')"
-RUN installGithub.r-d TRUE \
+RUN installGithub.r -d TRUE \
   NathanSkene/One2One \
   hhoeflin/hdf5r \
-  nfancy/loomR \
+  mojaveazure/loomR@develop \
   neurogenomics/scFlowExample
 
 #RUN R -e "devtools::install_github('NathanSkene/One2One')"
