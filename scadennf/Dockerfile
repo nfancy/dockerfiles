@@ -1,5 +1,4 @@
-ARG BASE_IMAGE
-FROM ${BASE_IMAGE}
+FROM python:python:3.9.5-buster
 
 RUN apt-get update && apt-get upgrade -y
 RUN apt-get install python3 -y
