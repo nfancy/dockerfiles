@@ -1,4 +1,4 @@
-FROM python:3.7.9-slim AS compile-image
+FROM python:3.9.5-slim
 
 RUN apt-get update && apt-get upgrade -y
 RUN apt-get install python3 -y
